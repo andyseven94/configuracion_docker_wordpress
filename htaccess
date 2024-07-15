@@ -1,0 +1,24 @@
+# BEGIN WordPress
+# Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<files wp-config.php>
+  order allow,deny
+  deny from all
+</files>
+
+<Files xmlrpc.php>
+order allow,deny
+deny from all
+</Files>
+# END WordPress
+
+# BEGIN Security Headers
+# Header always append X-Frame-Options SAMEORIGIN
+# Header set X-Content-Type-Options nosniff
+# Header set X-XSS-Protection "1; mode=block"
+# Header set Content-Security-Policy "default-src 'self'"
+# END Security Headers
+
+Options All -Indexes
+
